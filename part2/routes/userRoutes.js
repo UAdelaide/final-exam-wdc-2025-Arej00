@@ -95,4 +95,7 @@ const requireRole = (role) => {
   };
 };
 
+router.requireAuth = requireAuth;
+router.requireRole = requireRole;
+
 module.exports = router;
