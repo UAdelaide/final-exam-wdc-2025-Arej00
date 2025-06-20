@@ -81,6 +81,13 @@ const requireAuth=(req,res,next)=>{
     return res.status(401).json({error: 'Authentication required' });
   }
   next();
-}
+};
+
+const requireAuth=(req,res,next)=>{
+  if(!req.session.user){
+    return res.status(401).json({error: 'Authentication required' });
+  }
+  next();
+};
 
 module.exports = router;
