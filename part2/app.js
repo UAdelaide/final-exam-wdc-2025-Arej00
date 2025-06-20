@@ -24,10 +24,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.get('/',(req,res) => {
-    if(!req.session.user || req.session.user.role !=='walker'){
-        return res.redirect('/');
-    }
-    res.sendFile(path.join(__dirname,'public','walker-dashboard.html'));
+    res.sendFile(path.join(__dirname,'public','index.html'));
 });
 
 app.get('/owner-dashboard.html',(req,res) => {
