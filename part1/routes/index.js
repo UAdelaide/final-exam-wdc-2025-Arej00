@@ -6,7 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-app.get('/api/')
+app.get('/api/dogs',async(req,res)=>{
+  
+})
 
 
 module.exports = router;
