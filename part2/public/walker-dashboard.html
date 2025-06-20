@@ -13,7 +13,7 @@
 
     <!-- Add Logout button -->
     <button class="btn btn-danger" @click="logout">Logout</button>
-    
+
     <!-- Alert messages -->
     <div v-if="message" class="alert alert-info">{{ message }}</div>
     <div v-if="error" class="alert alert-danger">{{ error }}</div>
@@ -76,6 +76,22 @@
             message.value = '';
           }
         }
+        async function logout() {
+          try {
+            const response=await fetch('/api/users/logout',{
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json'}
+            });
+            if(response.ok){
+              document.cookie='connect.sid=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+              window.location.href= '/';
+            }else{
+              error.value= 'Logout failed';
+            }
+          }catch (err) {
+            error.value= 'Error during logout';
+          }
+        }
 
         onMounted(() => {
           loadWalkRequests();
@@ -85,7 +101,8 @@
           walks,
           message,
           error,
-          applyToWalk
+          applyToWalk,
+          logout
         };
       }
     }).mount('#app');
