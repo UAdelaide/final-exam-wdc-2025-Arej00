@@ -42,7 +42,11 @@
               headers: {'Content-Type': 'application/json' },
               body: JSON.stringify({email: this.email, password: this.password })
             });
-            const data
+            const data=await response.json();
+
+            if(response.ok){
+              if()
+            }
 
           }
         }
