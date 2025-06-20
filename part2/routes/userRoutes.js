@@ -95,7 +95,7 @@ router.get('/me/dogs', async (req, res) => {
 
     res.json(rows);
   } catch (error) {
-    console
+    console.error('Error fetching dogs:',error)
     res.status(500).json({ error: 'Failed to load dogs' });
   }
 });
