@@ -82,5 +82,7 @@ router.post('/logout',(req,res) => {
   });
 });
 
+//Route to get owner's dog:
+
 
 module.exports = router;
