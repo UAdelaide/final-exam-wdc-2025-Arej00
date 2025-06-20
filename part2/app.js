@@ -16,7 +16,9 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.get('/owner-dashboard.html',(req,res) => {
-    if(!req.session.user || req.session.user)
+    if(!req.session.user || req.session.user.role !=='owner'){
+        return res.redirect('/');
+    }
 })
 
 // Export the app instead of listening here
