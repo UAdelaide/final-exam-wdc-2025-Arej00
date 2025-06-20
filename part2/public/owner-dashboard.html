@@ -23,8 +23,8 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog</label>
-            Replaced 
-            <input v-model="form.dog_id" type="number" class="form-control" required>
+            <!-- Replaced input with select -->
+            <select v-model="form.dog_id" type="number" class="form-control" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
