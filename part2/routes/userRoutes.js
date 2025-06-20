@@ -95,7 +95,8 @@ router.get('/api/users/me/dogs', async (req, res) => {
 
     res.json({ rows });
   } catch (error) {
-    res.status(500).json({ error: 'Registration failed' });
+    res.status(500).json({ error: 'Failed to load dogs' });
   }
 });
+
 module.exports = router;
