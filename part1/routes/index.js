@@ -35,7 +35,8 @@ router.get('/api/walkers/summary', async (req, res) => {
     ROUND(AVG(r.rating),2) AS average_rating,
     COUNT(DISTINCT wr_completed.request_id) AS completed_walks
     FROM Users u
-    LEFT JOIN WalkRatings r ON u.user_id=
+    LEFT JOIN WalkRatings r ON u.user_id=r.walker_id
+    LEFT JOIN WalkRequests wr_completed
   `);
   res.json(rows);
 });
