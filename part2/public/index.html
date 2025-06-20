@@ -12,7 +12,7 @@
   <div id="app" class="container py-5">
     <h2 class="text-center text-primary mb-4">Login</h2>
     <form @submit.prevent="handleLogin" class="mx-auto" style="max-width: 300px;">
-      <div v-if="error"
+      <div v-if="error" class="alert alert-danger p-2">{{}}</div>
     </form>
 
   </div>
