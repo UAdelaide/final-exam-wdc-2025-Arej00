@@ -93,7 +93,7 @@ router.get('/api/users/me/dogs', async (req, res) => {
       SELECT dog_id, name FROM Dogs WHERE owner_id=?`,
       [req.session.user_id].user.user_id);
 
-    res.
+    res.json({ rows });
   } catch (error) {
     res.status(500).json({ error: 'Registration failed' });
   }
