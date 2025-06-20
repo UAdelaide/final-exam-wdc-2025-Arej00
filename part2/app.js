@@ -19,6 +19,7 @@ app.get('/owner-dashboard.html',(req,res) => {
     if(!req.session.user || req.session.user.role !=='owner'){
         return res.redirect('/');
     }
+    res.sendFile(path.join(__dir))
 })
 
 // Export the app instead of listening here
