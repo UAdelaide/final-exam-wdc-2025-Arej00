@@ -76,6 +76,10 @@ router.post('/login', async (req, res) => {
   }
 });
 
-const requireAuth=
+const requireAuth=(req,res,next)=>{
+  if(!req.session.user){
+    
+  }
+}
 
 module.exports = router;
