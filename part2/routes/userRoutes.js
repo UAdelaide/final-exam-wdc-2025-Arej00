@@ -86,7 +86,7 @@ router.post('/logout',(req,res) => {
 
 router.get('/api/users/me/dogs', async (req, res) => {
   if(!req.session.user || !req.session.user.role !=='owner'){
-    
+    return res.status(401).json({ error:'Not authorized' })
   }
   try {
     const [result] = await db.query(`
