@@ -42,7 +42,9 @@
             <h1>Welcome to the Dog Pgae!</h1>
             <button class="button" @click="fetchDog">Want to see a dog?Click Me</button>
             <img :src="dogImage" alt="image" width="400" v-if="dogImage"/>
-            <p
+            <p v-if="dogImage">
+                DOG OF THE DAY:{{}}
+            </p>
         </div>
     </div>
 </body>
