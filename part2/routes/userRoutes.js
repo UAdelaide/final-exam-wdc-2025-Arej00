@@ -90,7 +90,8 @@ router.get('/api/users/me/dogs', async (req, res) => {
   }
   try {
     const [rows] = await db.query(`
-      SELECT dog_id, name FROM Dogs WHERE owner_id=?`,;
+      SELECT dog_id, name FROM Dogs WHERE owner_id=?`,
+      [req.session.user_id].;
 
     res.status(201).json({ message: 'User registered', user_id: result.insertId });
   } catch (error) {
