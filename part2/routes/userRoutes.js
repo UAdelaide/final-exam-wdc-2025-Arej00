@@ -89,10 +89,8 @@ router.get('/api/users/me/dogs', async (req, res) => {
     return res.status(401).json({ error:'Not authorized' })
   }
   try {
-    const [result] = await db.query(`
-      INSERT INTO Users (username, email, password_hash, role)
-      VALUES (?, ?, ?, ?)
-    `, [username, email, password, role]);
+    const [rows] = await db.query(`
+      SELECT dog;
 
     res.status(201).json({ message: 'User registered', user_id: result.insertId });
   } catch (error) {
