@@ -130,6 +130,8 @@
             }else{
               error.value= 'Logout failed';
             }
+          }catch (err) {
+            error.value= 'Error during logout';
           }
         }
 
