@@ -15,7 +15,9 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.get('/owner-dashb')
+app.get('/owner-dashboard.html',(req,res) => {
+    if
+})
 
 // Export the app instead of listening here
 module.exports = app;
