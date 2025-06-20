@@ -47,10 +47,10 @@
         const message = ref('');
         const error = ref('');
         const user = ref(null);
-        
-        async function loadWalkRequests() {
+
+        async function getCurrentUser() {
           try {
-            const res = await fetch('/api/walks');
+            const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error('Failed to load walk requests');
             walks.value = await res.json();
           } catch (err) {
