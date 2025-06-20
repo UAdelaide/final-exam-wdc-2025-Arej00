@@ -85,8 +85,7 @@ router.post('/logout',(req,res) => {
 //Route to get owner's dog:
 
 router.get('/api/users/me/dogs', async (req, res) => {
-  const { username, email, password, role } = req.body;
-
+  if(!req.session.user || )
   try {
     const [result] = await db.query(`
       INSERT INTO Users (username, email, password_hash, role)
