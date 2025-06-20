@@ -85,7 +85,7 @@ router.post('/logout',(req,res) => {
 //Route to get owner's dog:
 
 router.get('/me/dogs', async (req, res) => {
-  if(!req.session.user || !req.session.user.role !=='owner'){
+  if(!req.session.user || req.session.user.role !=='owner'){
     return res.status(401).json({ error:'Not authorized' })
   }
   try {
