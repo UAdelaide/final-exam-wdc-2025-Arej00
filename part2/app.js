@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(session({
-    secret: '',
+    secret: 'password',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
