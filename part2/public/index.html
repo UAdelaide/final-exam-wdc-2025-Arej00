@@ -53,6 +53,8 @@
             }else{
               this.error=data.error || 'Login failed';
             }
+          }catch(error){
+            this.error='An error occurred.Please try again'
           }
         }
       }
