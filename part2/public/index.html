@@ -51,9 +51,8 @@
                 window.location.href='/walker-dashboard.html';
               }
             }else{
-              this.error
+              this.error=data.error || 'Login failed';
             }
-
           }
         }
       }
