@@ -61,7 +61,7 @@
         const appMounted=ref(false);
 
         async function handleLogin() {
-          this.error = '';
+          error.value = '';
           try{
             const response=await fetch('/api/users/login', {
               method: 'POST',
