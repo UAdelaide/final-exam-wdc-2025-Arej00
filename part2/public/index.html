@@ -32,12 +32,13 @@
             <th scope="col">Dog ID</th>
             <th scope="col">Dog Name</th>
             <th scope="col">Size</th>
-            <th scope="col">Owner</th>
+            <th scope="col">Owner ID</th>
             <th scope="col">Photo</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="dog in dogs" :key="dog.dog_name">
+            <td>{{ dod.dog}}</td>
             <td>{{ dog.dog_name }}</td>
             <td>{{ dog.size }}</td>
             <td>{{ dog.owner_username }}</td>
