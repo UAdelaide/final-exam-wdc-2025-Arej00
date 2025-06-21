@@ -99,7 +99,9 @@
               }
             }));
             dog.value=dogsWithPhotos;
-          }catc
+          }catch (err) {
+              dogError.value = err.message;
+              console.error('Load dogs error:', err);
 
 
       }
