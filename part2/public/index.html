@@ -94,6 +94,8 @@
                 if(!photoRes,ok) throw new Error("Failed to load dog photo");
                 const photoData=await photoRes.json();
                 return { ...dog, photo: photoData.message };
+              }catch(error){
+                this.error='An error occurred.Please try again.'
               }
             }))
 
