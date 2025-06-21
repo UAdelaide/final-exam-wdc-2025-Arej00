@@ -74,10 +74,8 @@
                             console.error('Invalid API response structure')
                         }
                     }).catch(error=>{
-                        console.error('Fetch error')
-                    })
-
-            });
+                        console.error('Fetch error:',error);
+                    });
 
             }
         }
