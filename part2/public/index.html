@@ -82,7 +82,7 @@
             this.error='An error occurred.Please try again.'
           }
         }
-        async loadDogs() {
+        async function loadDogs() {
           try{
             const response=await fetch('/api/dogs');
             const dogData=await response.json();
