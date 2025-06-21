@@ -22,9 +22,7 @@ router.get('/api/dogs', async (req, res) => {
 
 router.get('/api/walkrequests/open', async (req, res) => {
   try{
-    
-  }
-  const [rows] = await db.query(`
+    const [rows] = await db.query(`
     SELECT wr.request_id,d.name AS dog_name,wr.requested_time,
     wr.duration_minutes,wr.location,u.username AS owner_username
     FROM WalkRequests wr
@@ -33,6 +31,10 @@ router.get('/api/walkrequests/open', async (req, res) => {
     WHERE wr.status='open'
   `);
   res.json(rows);
+
+  }catch (err) {
+    res.status(500).json({ error: 'Failed to fetch dogs',details: err.message});
+
 });
 
 router.get('/api/walkers/summary', async (req, res) => {
