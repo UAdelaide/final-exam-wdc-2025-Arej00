@@ -38,10 +38,10 @@
         </thead>
         <tbody>
           <tr v-for="dog in dogs" :key="dog.dog_name">
-            <td>{{ dod.dog}}</td>
+            <td>{{ dod.dog_id }}</td>
             <td>{{ dog.dog_name }}</td>
             <td>{{ dog.size }}</td>
-            <td>{{ dog.owner_username }}</td>
+            <td>{{ <dog class="owner_id"></dog> }}</td>
             <td>
               <img :src="dog.photo" alt="Dog Photo" class="img-fluid rounded" style="max-width:100 px; max-height: 100px;">
             </td>
