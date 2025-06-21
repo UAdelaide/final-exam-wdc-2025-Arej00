@@ -61,7 +61,9 @@
                 fetchDog(){
                     fetch('https://dog.ceo/api/breeds/image/random')
                     .then(response =>{
-                        if
+                        if(!response.ok){
+                            
+                        }
                     })
 
             });
