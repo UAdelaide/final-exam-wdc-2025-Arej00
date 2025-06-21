@@ -50,9 +50,9 @@
   <p v-if="dogError" class="text-danger">{{ dogError }}</p>
 
   <script>
-    const { createApp,ref } = Vue;
+    const { createApp,ref,onMounted } = Vue;
     createApp({
-      data() {
+      d() {
         return {
           username: '',
           password: '',
