@@ -53,13 +53,13 @@
     const { createApp,ref,onMounted } = Vue;
     createApp({
       setup() {
-const username = ref('');
+        const username = ref('');
         const password = ref('');
         const error = ref('');
         const dogs = ref([]);
         const dogError = ref('');
-      methods: {
-        async handleLogin() {
+
+        async function handleLogin() {
           this.error = '';
           try{
             const response=await fetch('/api/users/login', {
