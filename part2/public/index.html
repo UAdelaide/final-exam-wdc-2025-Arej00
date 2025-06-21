@@ -94,7 +94,7 @@
                 const photoData=await photoRes.json();
                 return { ...dog, photo: photoData.message };
               }catch(photoErr){
-                this.error='Photo fetch errir.'
+                this.error='Photo fetch error.'
               }
             }));
             dog.value=dogsWithPhotos;
