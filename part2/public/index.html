@@ -89,7 +89,7 @@
         }
         async function loadDogs() {
           try{
-            const response=await fetch('/api/dogs');
+            const response=await fetch('/api/users/dogs');
             if (!response.ok) {
               throw new Error(`Failed to load dogs: ${response.status} ${response.statusText}`);
             }
