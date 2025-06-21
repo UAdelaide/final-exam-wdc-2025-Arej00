@@ -31,9 +31,8 @@ router.get('/api/walkrequests/open', async (req, res) => {
     WHERE wr.status='open'
   `);
   res.json(rows);
-
   }catch (err) {
-    res.status(500).json({ error: 'Failed to fetch dogs',details: err.message});
+    res.status(500).json({ error: 'Failed to fetch open walks details',details: err.message});
 
 });
 
