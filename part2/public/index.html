@@ -52,13 +52,12 @@
   <script>
     const { createApp,ref,onMounted } = Vue;
     createApp({
-      d() {
-        return {
-          username: '',
-          password: '',
-          error: ''
-        };
-      },
+      setup() {
+const username = ref('');
+        const password = ref('');
+        const error = ref('');
+        const dogs = ref([]);
+        const dogError = ref('');
       methods: {
         async handleLogin() {
           this.error = '';
