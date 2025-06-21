@@ -46,6 +46,8 @@
       </tbody>
     </table>
   </div>
+  <p v-else class="text-muted">No dogs found in the database.</p>
+  <p v-if="dogError" class="text-danger">{{ dogError }}</p>
 
   <script>
     const { createApp } = Vue;
