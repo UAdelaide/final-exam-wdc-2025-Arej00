@@ -75,6 +75,8 @@
                         console.log('API Response:',data);
                         if(data && data.message){
                             this.dogImage=data.message;
+                            this.dogName=randomDog.name;
+                            this
                         }else{
                             console.error('Invalid API response structure')
                         }
