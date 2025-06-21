@@ -38,17 +38,17 @@
         <tbody>
           <tr v-for="dog in dogs" :key="dog.dog_name">
             <td>{{ dog.dog_name }}</td>
-          <td>{{ dog.size }}</td>
-          <td>{{ dog.owner_username }}</td>
-          <td>
-            <img :src="dog.photo" alt="Dog Photo" class="img-fluid rounded" style="max-width:100 px; max-height: 100px;">
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p v-else class="text-muted">No dogs found in the database.</p>
-  <p v-if="dogError" class="text-danger">{{ dogError }}</p>
+            <td>{{ dog.size }}</td>
+            <td>{{ dog.owner_username }}</td>
+            <td>
+              <img :src="dog.photo" alt="Dog Photo" class="img-fluid rounded" style="max-width:100 px; max-height: 100px;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p v-else class="text-muted">No dogs found in the database.</p>
+    <p v-if="dogError" class="text-danger">{{ dogError }}</p>
 
   <script>
     const { createApp,ref,onMounted } = Vue;
