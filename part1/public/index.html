@@ -60,6 +60,9 @@
                 };
             };
             methods:{
+                this.isLoading= true,
+                this.errorMessage= '',
+                this
                 fetchDog(){
                     fetch('https://dog.ceo/api/breeds/image/random')
                     .then(response =>{
