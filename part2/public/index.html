@@ -77,7 +77,7 @@
                 window.location.href='/walker-dashboard.html';
               }
             }else{
-              this.error=data.error || 'Login failed';
+              error.error=data.error || 'Login failed';
             }
           }catch(error){
             this.error='An error occurred.Please try again.'
