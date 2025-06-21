@@ -104,7 +104,10 @@
             console.error('Load dogs error:', err);
           }
         }
-        onMounted(()
+        onMounted(() => {
+          loadDogs();
+        });
+        
 
 
       }
