@@ -88,7 +88,11 @@
             const response=await fetch('/api/dogs');
             const dogData=await response.json();
 
-            const dogsWithPhotos=await Promise.all(dogData.map(async))
+            const dogsWithPhotos=await Promise.all(dogData.map(async (dog) =>{
+              try{
+                const photoRes=await fetch()
+              }
+            }))
 
             if(response.ok){
               if(data.user.role=='owner'){
