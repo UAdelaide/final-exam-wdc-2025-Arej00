@@ -50,7 +50,7 @@
     <p v-else class="text-muted">No dogs found in the database.</p>
     <p v-if="dogError" class="text-danger">{{ dogError }}</p>
   </div>
-  
+
   <script>
     const { createApp,ref,onMounted } = Vue;
     createApp({
@@ -73,6 +73,8 @@
             const data=await response.json();
 
             if(response.ok){
+              username.value='';
+              password.value
               if(data.user.role=='owner'){
                 window.location.href="/owner-dashboard.html";
               }else if(data.user.role=='walker'){
