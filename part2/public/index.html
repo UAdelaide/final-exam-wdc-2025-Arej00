@@ -36,7 +36,9 @@
       </thead>
       <tbody>
         <tr v-for="dog in dogs" :key="dog.dog_name">
-          <td>{{ dog.do}}</td>
+          <td>{{ dog.dog_name }}</td>
+          <td>{{ dog.size }}</td>
+          <td>{{ dog.owner }}</td>
         </tr>
       </tbody>
     </table>
