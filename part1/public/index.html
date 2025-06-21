@@ -52,10 +52,6 @@
         createApp({
             data(){
                 return{
-                    step1: false,
-                    step2: false,
-                    step3: false,
-                    showModal: false,
                     dogImage:'',
                     dogName:'Wrecky',
                     dogSize:'extra-large'
@@ -63,8 +59,6 @@
             };
             methods:{
                 fetchDog(){
-                    this.showModal=true;
-                    this.dogImage='';
                     fetch('https://dog.ceo/api/breeds/image/random')
                     .then(response =>{
                         if(!response.ok){
