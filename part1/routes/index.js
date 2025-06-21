@@ -47,10 +47,10 @@ router.get('/api/walkers/summary', async (req, res) => {
     LEFT JOIN WalkRatings wr ON u.user_id=wr.walker_id
     WHERE u.role='walker'
     GROUP BY u.username
-  `);
-  res.json(rows);
+   `);
+   res.json(rows);
   }catch (err) {
-    res.status(500).json({ error: 'Failed to fetch open walks details',details: err.message});
+    res.status(500).json({ error: 'Failed to fetch walker summary',details: err.message});
 });
 
 module.exports = router;
