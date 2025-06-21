@@ -14,14 +14,14 @@
     <div v-if="appMounted" class="mx-auto" style="max-width: 300px">
       <form @submit.prevent="handleLogin" class="mx-auto" style="max-width: 300px;">
         <div v-if="error" class="alert alert-danger p-2">{{ error }}</div>
-      <div class="mb-3">
-        <input v-model="username" type="text" class="form-control" placeholder="Username" required>
-      </div>
-      <div class="mb-3">
-        <input v-model="password" type="password" class="form-control" placeholder="Password" required>
-      </div>
-      <button type="submit" class="btn btn-primary w-100">Login</button>
-    </form>
+        <div class="mb-3">
+          <input v-model="username" type="text" class="form-control" placeholder="Username" required>
+        </div>
+        <div class="mb-3">
+          <input v-model="password" type="password" class="form-control" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
   </div>
 
   <h2 class="mb-3 text-primary mt-5">Our Dogs</h2>
