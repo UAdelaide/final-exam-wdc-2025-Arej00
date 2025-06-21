@@ -85,12 +85,8 @@
         }
         async loadDogs() {
           try{
-            const response=await fetch('/api/dogs', {
-              method: 'POST',
-              headers: {'Content-Type': 'application/json' },
-              body: JSON.stringify({username: this.username, password: this.password })
-            });
-            const data=await response.json();
+            const response=await fetch('/api/dogs');
+            const dogData=await response.json();
 
             if(response.ok){
               if(data.user.role=='owner'){
