@@ -93,7 +93,7 @@
                 const photoRes=await fetch("https://dog.ceo/api/breeds/image/random");
                 if(!photoRes,ok) throw new Error("Failed to load dog photo");
                 const photoData=await photoRes.json();
-                
+                return { ...dog, photo: phot}
               }
             }))
 
