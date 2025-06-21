@@ -90,6 +90,10 @@
         async function loadDogs() {
           try{
             const response=await fetch('/api/dogs');
+            if (!response.ok) {
+              throw new Error(`Failed to load dogs: ${response.status} ${response.statusText
+              `);
+            }
             const dogData=await response.json();
 
             const dogsWithPhotos=await Promise.all(dogData.map(async (dog) =>{
