@@ -97,9 +97,11 @@
               }catch(error){
                 this.error='Photo fetch errir.'
               }
-            }))
+            }));
+            dog.value=dogsWithPhotos;
+          }
 
-           
+
       }
     }).mount('#app');
   </script>
