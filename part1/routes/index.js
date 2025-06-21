@@ -37,7 +37,8 @@ router.get('/api/walkrequests/open', async (req, res) => {
 });
 
 router.get('/api/walkers/summary', async (req, res) => {
-  const [rows] = await db.query(`
+  try{
+    const [rows] = await db.query(`
     SELECT u.username AS walker_username,
       COUNT(wr.rating_id) AS total_ratings,
       AVG(wr.rating) AS average_rating,
@@ -48,6 +49,8 @@ router.get('/api/walkers/summary', async (req, res) => {
     GROUP BY u.username
   `);
   res.json(rows);
+    }
+
 });
 
 module.exports = router;
