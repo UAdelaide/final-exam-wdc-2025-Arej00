@@ -105,6 +105,7 @@
           }
         }
         onMounted(() => {
+          appMounted.value=true;
           loadDogs();
         });
 
@@ -113,7 +114,8 @@
           error,
           handleLogin,
           dogs,
-          dogError
+          dogError,
+          appMounted
         };
       }
     }).mount('#app');
