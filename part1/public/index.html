@@ -40,7 +40,7 @@
     <div id="app">
         <div class="content">
             <h1>🐕Welcome to the Dog Page!🐕</h1>
-            <button class="button" @click="fetchDog @mousemove="moveButton">Want to see a dog?Click Me!!Click Me!!</button>
+            <button class="button" @click="fetchDog" @mousemove="moveButton">Want to see a dog?Click Me!!Click Me!!</button>
             <p v-if="isLoading">LOADING... PLS WAIT!!!</p>
             <img :src="dogImage" alt="image" width="400" v-if="dogImage"/>
             <p class="extra">
